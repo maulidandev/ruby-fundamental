@@ -1,19 +1,3 @@
-def getMax(arr)
-    max = 0
-
-    if arr.length > 0
-        max = arr[0]
-
-        arr.each do |number|
-            if max < number
-                max = number
-            end
-        end
-    end
-
-    return max
-end
-
 print "Masukkan banyak data :"
 n = gets.chomp.to_i
 
@@ -21,7 +5,7 @@ print "Masukkan data : "
 candles = gets.chomp
 candles = candles.split(" ").map(&:to_i)
 
-max = getMax(candles)
+max = candles.max
 
 tallestCandlesCount = 0
 
